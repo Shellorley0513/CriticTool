@@ -545,14 +545,8 @@ pre {
             </p>
             <p>
                 Through extensive experiments, we divide LLM errors in tool invocation into two categories: <b>Internal Model-Driven Errors</b> and <b>External Environment Errors</b>. Among them, Internal Model-Driven Errors can be more finely divided into <u>Selection Errors, Tool Hallucination Errors, Parameter Key Errors and Parameter Value Errors</u>(Fig. 2).
-            </p>
-            <p>
-                The data construction of CRITICTOOL is systematically structured in four phases to mirror real-world tool-use complexities. First, high-quality tool-use trajectories are collected from benchmarks like BFCL and T-Eval, with manual filtering to ensure data reliability and standardization of tool-call formats. Second, error diversification generates internal model-driven errors via error simulator and external environment errors (e.g., connection timeouts) through repeated API calls or API simulator for inaccessible APIs. Third, tool response handling employs cache retrieval, actual API execution, or GPT-4o simulation to provide context-specific feedback for error scenarios . Finally, the Scalable and Robust Mixed Self-Evolution (SRM) strategy enhances dataset realism by introducing long contexts, extra tools, noisy queries, and obfuscated API documentation. This pipeline yields a dataset of 1,490 base and 1,250 evolved examples for comprehensive LLM self-critique evaluation.
-            </p>
-            <p>
-                In summary, <b>CRITICTOOL is the first benchmark evaluating LLMs' self-critique in tool-calling errors</b>, built via data collection, error diversification, response handling, and evolution strategies.
-            </p>
-                    <center>
+            </p>                   
+             <center>
             <!-- <figure>
                 <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
                     <source src="materials/teaser.m4v" type="video/mp4">
@@ -568,6 +562,13 @@ pre {
                 </p>
             </figure>
         </center>
+            <p>
+                The data construction of CRITICTOOL is systematically structured in four phases to mirror real-world tool-use complexities. First, high-quality tool-use trajectories are collected from benchmarks like BFCL and T-Eval, with manual filtering to ensure data reliability and standardization of tool-call formats. Second, error diversification generates internal model-driven errors via error simulator and external environment errors (e.g., connection timeouts) through repeated API calls or API simulator for inaccessible APIs. Third, tool response handling employs cache retrieval, actual API execution, or GPT-4o simulation to provide context-specific feedback for error scenarios . Finally, the Scalable and Robust Mixed Self-Evolution (SRM) strategy enhances dataset realism by introducing long contexts, extra tools, noisy queries, and obfuscated API documentation. This pipeline yields a dataset of 1,490 base and 1,250 evolved examples for comprehensive LLM self-critique evaluation.
+            </p>
+            <p>
+                In summary, <b>CRITICTOOL is the first benchmark evaluating LLMs' self-critique in tool-calling errors</b>, built via data collection, error diversification, response handling, and evolution strategies.
+            </p>
+
         </div>
         
     </section>
