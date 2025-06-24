@@ -457,8 +457,8 @@ pre {
                 Shiting Huang<sup>1*</sup>,
                 <a href="https://costaliya.github.io//">Zhen Fang<sup>1,3*</sup></a>,
                 <a href="https://lovesnowbest.site/">Zehui Chen<sup>1</sup></a>,
-                <a href="https://siyuyuan.github.io/">Siyu Yuan<sup>2</sup></a>,  Junjie Ye<sup>2</sup>, Yu Zeng<sup>1</sup>,  
-                <a href="https://siyuyuan.github.io/">Lin Chen<sup>1</sup></a>,<br>
+                <a href="https://siyuyuan.github.io/">Siyu Yuan<sup>2</sup></a>,  Junjie Ye<sup>2</sup>,<br> Yu Zeng<sup>1</sup>,  
+                <a href="https://siyuyuan.github.io/">Lin Chen<sup>1</sup></a>,
                 <a href="https://sites.google.com/view/qi-mao/">Qi Mao<sup>3</sup></a>,
                 <a href="https://scholar.google.co.uk/citations?user=r6CvuOUAAAAJ&hl=en">Feng Zhao<sup>1†</sup></a>,
             </div>
@@ -534,7 +534,7 @@ pre {
     </section>
 
     <section id="data generation pipeline"/>
-        <h2 style="text-align: center;">Evaluation Protocol</h2>
+        <h2 style="text-align: center;">Dataset</h2>
         <div class="flex-row">
             <p>
                 Tool utilization with LLMs touches upon multiple dimensions of capabilities. We deconstruct the tool-calling process into several key aspects, as depicted in Fig. 1. Initially, solving complex real-world problems frequently requires a multi-step approach to tool calling. This requires a robust <b>planning</b> ability (Fig. 1(a)) to develop a strategy for tool calling that guides subsequent actions.
@@ -546,6 +546,22 @@ pre {
                 In summary, <b>T-Eval</b> takes the six ability dimensions as mentioned above (<b>planning, reason, retrieve, understand, instruct,</b> and <b>review</b>) into consideration, measuring not only the overall performance of tool-utilization but also detailed scores.
             </p>
         </div>
+                <center>
+            <!-- <figure>
+                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
+                    <source src="materials/teaser.m4v" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure> -->
+            <figure>
+                <a>
+                    <img width="95%" src="figure/teaser.png"> 
+                </a>
+                <p class="caption", style="text-align: center;">
+                    Figure 1. Overview of <b>CriticTool</b>.
+                </p>
+            </figure>
+        </center>
     </section>
 
     <section id="data generation pipeline image">
@@ -596,7 +612,7 @@ pre {
                 <a>
                     <img width="95%" src="figure/result.png"> 
                 </a>
-                <p class="caption", style="text-align: center;">
+                <p class="caption", style="text-align: left;">
                     Figure 2. the main result of <b>CriticTool</b>.<strong>Bold</strong> indicates the best performance across all models, while <u>underline</u> denotes the best performance within the same group and scale of models.
                 </p>
             </figure>
