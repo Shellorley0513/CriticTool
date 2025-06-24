@@ -540,11 +540,13 @@ pre {
                 Tool calling is a challenging long-horizon task for LLM. This requires a robust <b>planning</b> ability (Fig. 1(a)) to develop a strategy for tool calling that guides subsequent actions. Models may make mistakes and also correct them. We believe that this <b>recover from error</b>—referring to the ability of a large language model (LLM) to successfully handle an error in a given step—represents the model's <b>self-critique capability</b>.
             </p>
             <p>
-                Through extensive experiments, we divide LLM errors in tool invocation into two categories: <b>Internal Model-Driven Errors</b> and <b>External Environment Errors</b>. Among them, Internal Model-Driven Errors can be more finely divided into Tool Selection Errors, Tool Hallucination Errors, Parameter Key Errors and Parameter Value Errors.
-                The contexts in which tools are utilized can be intricate, and thus strong <b>reasoning</b> abilities (Fig. 1(b)) are essential to generating logical thoughts for the next steps. After generating a thought, selecting the appropriate tools from a given list demands effective <b>retrieval</b> skills (Fig. 1(c)). Additionally, integrating the correct parameters requires the <b>understanding</b> ability (Fig. 1(d)) to interpret tool documentation and corresponding thoughts. Finally, executing the tool-calling action mandates adept <b>instruction following</b> skills (Fig. 1(e)) to formulate precise requests for APIs. Each tool call executed by LLM must be evaluated to ensure the response meets the intended objective. This crucial evaluation is named the <b>review</b> ability (Fig. 1(f)). 
+                Through extensive experiments, we divide LLM errors in tool invocation into two categories: <b>Internal Model-Driven Errors</b> and <b>External Environment Errors</b>. Among them, Internal Model-Driven Errors can be more finely divided into <u>Selection Errors, Tool Hallucination Errors, Parameter Key Errors and Parameter Value Errors</u>(Fig. 2).
             </p>
             <p>
-                In summary, <b>T-Eval</b> takes the six ability dimensions as mentioned above (<b>planning, reason, retrieve, understand, instruct,</b> and <b>review</b>) into consideration, measuring not only the overall performance of tool-utilization but also detailed scores.
+                The data construction of CRITICTOOL is systematically structured in four phases to mirror real-world tool-use complexities. First, high-quality tool-use trajectories are collected from benchmarks like BFCL and T-Eval, with manual filtering to ensure data reliability and standardization of tool-call formats. Second, error diversification generates internal model-driven errors via error simulator and external environment errors (e.g., connection timeouts) through repeated API calls or API simulator for inaccessible APIs. Third, tool response handling employs cache retrieval, actual API execution, or GPT-4o simulation to provide context-specific feedback for error scenarios . Finally, the Scalable and Robust Mixed Self-Evolution (SRM) strategy enhances dataset realism by introducing long contexts, extra tools, noisy queries, and obfuscated API documentation. This pipeline yields a dataset of 1,490 base and 1,250 evolved examples for comprehensive LLM self-critique evaluation.
+            </p>
+            <p>
+                In summary, <b>CRITICTOOL is the first benchmark evaluating LLMs' self-critique in tool-calling errors</b>, built via data collection, error diversification, response handling, and evolution strategies.
             </p>
                     <center>
             <!-- <figure>
@@ -558,7 +560,7 @@ pre {
                     <img width="95%" src="figure/example.png"> 
                 </a>
                 <p class="caption", style="text-align: center;">
-                    Figure 1. Overview of <b>CriticTool</b>.
+                    Figure 2. Examples of Errors in multi-step tool call tasks.
                 </p>
             </figure>
         </center>
@@ -566,25 +568,7 @@ pre {
         
     </section>
 
-    <section id="data generation pipeline image">
-        <hr>
-        <center>
-            <!-- <figure>
-                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
-                    <source src="materials/teaser.m4v" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </figure> -->
-            <figure>
-                <a>
-                    <img width="95%" src="figure/anno_framework_v2.png"> 
-                </a>
-                <p class="caption", style="text-align: center;">
-                    Figure 2. the data generation pipeline.
-                </p>
-            </figure>
-        </center>
-    </section> 
+
     
     <section id="data generation pipeline"/>
     <h2 style="text-align: center;">Evaluation</h2>
@@ -615,7 +599,7 @@ pre {
                     <img width="95%" src="figure/result.png"> 
                 </a>
                 <p class="caption", style="text-align: left;">
-                    Figure 2. the main result of <b>CriticTool</b>.<strong>Bold</strong> indicates the best performance across all models, while <u>underline</u> denotes the best performance within the same group and scale of models.
+                    Figure 3. The main result of <b>CriticTool</b>.<strong>Bold</strong> indicates the best performance across all models, while <u>underline</u> denotes the best performance within the same group and scale of models.
                 </p>
             </figure>
         </center>
