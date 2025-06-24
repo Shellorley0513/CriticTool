@@ -537,31 +537,17 @@ pre {
         <h2 style="text-align: center;">Dataset</h2>
         <div class="flex-row">
             <p>
-                Tool utilization with LLMs touches upon multiple dimensions of capabilities. We deconstruct the tool-calling process into several key aspects, as depicted in Fig. 1. Initially, solving complex real-world problems frequently requires a multi-step approach to tool calling. This requires a robust <b>planning</b> ability (Fig. 1(a)) to develop a strategy for tool calling that guides subsequent actions.
+                Tool invocation is a challenging long-horizon task for LLM. This requires a robust <b>planning</b> ability (Fig. 1(a)) to develop a strategy for tool calling that guides subsequent actions. Models may make mistakes and also correct them. We believe that this <b>recover from error</b>—referring to the ability of a large language model (LLM) to successfully handle an error in a given step—represents the model's <b>self-critique capability</b>.
             </p>
             <p>
+                Through extensive experiments, we divide LLM errors in tool invocation into two categories: <b>Internal Model-Driven Errors</b> and <b>External Environment Errors</b>. Among them, Internal Model-Driven Errors can be more finely divided into Tool Selection Errors, Tool Hallucination Errors, Parameter Key Errors and Parameter Value Errors.
                 The contexts in which tools are utilized can be intricate, and thus strong <b>reasoning</b> abilities (Fig. 1(b)) are essential to generating logical thoughts for the next steps. After generating a thought, selecting the appropriate tools from a given list demands effective <b>retrieval</b> skills (Fig. 1(c)). Additionally, integrating the correct parameters requires the <b>understanding</b> ability (Fig. 1(d)) to interpret tool documentation and corresponding thoughts. Finally, executing the tool-calling action mandates adept <b>instruction following</b> skills (Fig. 1(e)) to formulate precise requests for APIs. Each tool call executed by LLM must be evaluated to ensure the response meets the intended objective. This crucial evaluation is named the <b>review</b> ability (Fig. 1(f)). 
             </p>
             <p>
                 In summary, <b>T-Eval</b> takes the six ability dimensions as mentioned above (<b>planning, reason, retrieve, understand, instruct,</b> and <b>review</b>) into consideration, measuring not only the overall performance of tool-utilization but also detailed scores.
             </p>
         </div>
-                <center>
-            <!-- <figure>
-                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
-                    <source src="materials/teaser.m4v" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </figure> -->
-            <figure>
-                <a>
-                    <img width="95%" src="figure/teaser.png"> 
-                </a>
-                <p class="caption", style="text-align: center;">
-                    Figure 1. Overview of <b>CriticTool</b>.
-                </p>
-            </figure>
-        </center>
+        
     </section>
 
     <section id="data generation pipeline image">
@@ -621,7 +607,7 @@ pre {
 
     <section>
         <hr>
-        This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>.
+        This webpage template was recycled from <a href='https://open-compass.github.io/T-Eval/'>here</a>.
         <!-- <center><p><a href='https://accessibility.mit.edu/'><b>Accessibility</b></a></p></center> -->
     </section>
 
