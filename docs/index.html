@@ -573,15 +573,24 @@ pre {
     <section id="data generation pipeline"/>
     <h2 style="text-align: center;">Evaluation</h2>
     <div class="flex-row">
+                <center>
+            <!-- <figure>
+                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
+                    <source src="materials/teaser.m4v" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure> -->
+            <figure>
+                <a>
+                    <img width="95%" src="figure/eval.png"> 
+                </a>
+                <p class="caption", style="text-align: left;">
+                    Figure 3. The main result of <b>CriticTool</b>.<strong>Bold</strong> indicates the best performance across all models, while <u>underline</u> denotes the best performance within the same group and scale of models.
+                </p>
+            </figure>
+        </center>
         <p>
-        The construction of <b>T-Eval</b> consists of three main phases: <b>tool collection</b>, <b>instruction generation</b>, and <b>golden solution annotation</b>. The overview of the construction is shown in Fig. 2. We follow two principles during the collection process:
-        </p>
-        <p class="inline-block mt-3">
-            <ol>
-              <li><b>High Availability and Usage Rate:</b> Considering that <b>T-Eval</b> is expected to cover most daily and practical use cases, we carefully select 1 ~ 2 tools for each specific domain, including Research, Travel, Entertainment, Web, Life, and Financials, resulting in 15 tools as our basic tool set.</li>
-              <li><b>Complete Documentations:</b> To reduce the failure of tool-calling cases caused by inadequate tool descriptions, which focus the evaluation attention on pure LLM abilities, we manually generate high-quality and detailed tool documentation for each tool.</li>
-            </ol>
-        </p>
+            CRITICTOOL's evaluation metrics are designed to assess LLM self-critique capabilities through multi-dimensional, fine-grained assessments. <strong>Reflect</strong> evaluates the model's ability to detect errors and identify their categories (e.g., tool selection, parameter key errors). <strong>Correct</strong> measures the capacity to generate valid tool calls that resolve internal model-driven errors. For external environment errors, <strong>Retry</strong> gauges the model's strategy to retry failed calls within limits, while <strong>Skip/Finish</strong> assesses its ability to terminate or pivot to subsequent tasks after unsuccessful retries. These metrics collectively provide a comprehensive framework to evaluate how LLMs handle errors across different scenarios, with an <strong>Overall score</strong> synthesizing performance to reflect holistic error management capabilities in tool-using tasks.
     </section>
 
     <section id="result"/>
