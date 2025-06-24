@@ -537,7 +537,7 @@ pre {
         <h2 style="text-align: center;">Dataset</h2>
         <div class="flex-row">
             <p>
-                Tool invocation is a challenging long-horizon task for LLM. This requires a robust <b>planning</b> ability (Fig. 1(a)) to develop a strategy for tool calling that guides subsequent actions. Models may make mistakes and also correct them. We believe that this <b>recover from error</b>—referring to the ability of a large language model (LLM) to successfully handle an error in a given step—represents the model's <b>self-critique capability</b>.
+                Tool calling is a challenging long-horizon task for LLM. This requires a robust <b>planning</b> ability (Fig. 1(a)) to develop a strategy for tool calling that guides subsequent actions. Models may make mistakes and also correct them. We believe that this <b>recover from error</b>—referring to the ability of a large language model (LLM) to successfully handle an error in a given step—represents the model's <b>self-critique capability</b>.
             </p>
             <p>
                 Through extensive experiments, we divide LLM errors in tool invocation into two categories: <b>Internal Model-Driven Errors</b> and <b>External Environment Errors</b>. Among them, Internal Model-Driven Errors can be more finely divided into Tool Selection Errors, Tool Hallucination Errors, Parameter Key Errors and Parameter Value Errors.
@@ -546,6 +546,22 @@ pre {
             <p>
                 In summary, <b>T-Eval</b> takes the six ability dimensions as mentioned above (<b>planning, reason, retrieve, understand, instruct,</b> and <b>review</b>) into consideration, measuring not only the overall performance of tool-utilization but also detailed scores.
             </p>
+                    <center>
+            <!-- <figure>
+                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
+                    <source src="materials/teaser.m4v" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure> -->
+            <figure>
+                <a>
+                    <img width="95%" src="figure/example.png"> 
+                </a>
+                <p class="caption", style="text-align: center;">
+                    Figure 1. Overview of <b>CriticTool</b>.
+                </p>
+            </figure>
+        </center>
         </div>
         
     </section>
