@@ -593,8 +593,17 @@ pre {
                 </p>
             </figure>
         </center>
-        <p>
-            CRITICTOOL's evaluation metrics are designed to assess LLM self-critique capabilities through multi-dimensional, fine-grained assessments. <strong>Reflect</strong> evaluates the model's ability to detect errors and identify their categories (e.g., tool selection, parameter key errors). <strong>Correct</strong> measures the capacity to generate valid tool calls that resolve internal model-driven errors. For external environment errors, <strong>Retry</strong> gauges the model's strategy to retry failed calls within limits, while <strong>Skip/Finish</strong> assesses its ability to terminate or pivot to subsequent tasks after unsuccessful retries. These metrics collectively provide a comprehensive framework to evaluate how LLMs handle errors across different scenarios, with an <strong>Overall score</strong> synthesizing performance to reflect holistic error management capabilities in tool-using tasks.
+
+            <p><strong>CRITICTOOL's</strong> evaluation metrics are designed to assess LLM self-critique capabilities through multi-dimensional, fine-grained assessments:</p>
+
+            <ul>
+            <li><strong>Reflect</strong>: Evaluates the model's ability to detect errors and identify their categories (e.g., tool selection, parameter key errors).</li>
+            <li><strong>Correct</strong>: Measures the capacity to generate valid tool calls that resolve internal model-driven errors.</li>
+            <li><strong>Retry</strong>: For external environment errors, gauges the model's strategy to retry failed calls within limits.</li>
+            <li><strong>Skip/Finish</strong>: Assesses the ability to terminate or pivot to subsequent tasks after unsuccessful retries.</li>
+            <li><strong>Overall score</strong>: Synthesizes performance to reflect holistic error management capabilities in tool-using tasks.</li>
+            </ul>
+
     </section>
 
     <section id="result"/>
