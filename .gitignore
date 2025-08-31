@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+
+# virtualenv
+venv/
+.venv/
+ENV/
+
+# data
+CriticTool-Dataset/
+workdirs/
+*.json
+*.jsonl

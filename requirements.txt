@@ -1,0 +1,5 @@
+git+https://github.com/NICTA/pyairports.git
+vllm==0.6.3
+sentence_transformers
+tqdm
+openai

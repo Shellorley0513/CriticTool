@@ -16,7 +16,7 @@ Official Implement of "CRITICTOOL: Evaluating Self-Critique Capabilities of Larg
 
 <div>
 <center>
-<img src="docs/figure/teaser.jpg">
+<img src="docs/figure/teaser.png">
 </div>
 
 ## 🚀 News
@@ -24,11 +24,61 @@ Official Implement of "CRITICTOOL: Evaluating Self-Critique Capabilities of Larg
 
 **[2025/6/24]** Release [CriticTool-Dataset](https://huggingface.co/datasets/chocckaka/CriticTool-Dataset).🤗🤗🤗
 
+**[2025/8/20]** CriticTool is accepted by `EMNLP 2025`.🎉🎉🎉
+
+**[2025/8/31]** Release test scripts and update [CriticTool-Dataset](https://huggingface.co/datasets/chocckaka/CriticTool-Dataset).✨✨✨
+
 ## 🧾 Todo
-[x] Release CriticTool dataset.
+- [x] Release CriticTool dataset.
 
-[ ] Release CriticTool evaluation code.
+- [x] Release CriticTool evaluation code.
 
+
+## 🔧 Install Dependencies
+```
+# Clone the CriticTool repository
+git clone https://github.com/Shellorley0513/CriticTool.git
+
+# Change directory to CriticTool
+cd CriticTool
+
+# Create a new Conda environment with Python 3.10
+conda create -n critictool python=3.10
+
+# Activate the new environment
+conda activate critictool
+
+# Install the package
+pip install -r requirements.txt
+```
+
+## 🛫 Get Start
+### Test Data
+You can download the dataset through huggingface via this [CriticTool-Dataset](https://huggingface.co/datasets/chocckaka/CriticTool-Dataset).
+Please place the test data files in the project directory with the following structure:
+```
+CriticTool/
+├── critictool/
+├── CriticTool-Dataset/
+│   ├── external_error/
+│   │   ├── ...
+│   └── internal_error/
+│       ├── ...
+└── ...     
+```
+
+### Model Evaluation
+The `run_test.sh` script provides a way to evaluate all types of data. To evaluate a local model, specify the parameters: `model_name`, `out_dir`, `template` and `batchsize`. To evaluate a API model, specify the parameters: `model_name`, `out_dir`, `api_key`, `base_url`, and `batchsize`. \
+Then run the script with the following command:
+```
+sh run_test.sh
+```
+Note:\
+When inferring with a local model, the messages will be converted into the raw string format using the appropriate `template`. `template` examples can be found in [chat_template.py](critictool/utils/chat_template.py).
+We provide `llama2`, `llama3`, `qwen`, `ministral` and `glm4`templates. If you need to evaluate models with other templates, please organize them following the provided example format.
+
+## 📊 Final Results
+You can find the inference results and evaluation results for each query data in the `out_dir` directory. The average evaluation metrics are available in the `results.jsonl` file.
 
 ## 🖊️ Citation
 If you find CriticTool useful for your research and applications, please cite using this BibTeX:
