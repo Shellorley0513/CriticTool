@@ -16,7 +16,7 @@ Official Implement of "CRITICTOOL: Evaluating Self-Critique Capabilities of Larg
 
 <div>
 <center>
-<img src="docs/figure/teaser.png">
+<img src="docs/figure/teaser.jpg">
 </div>
 
 ## 🚀 News
